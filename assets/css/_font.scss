@@ -1,0 +1,46 @@
+// -------------------------------Rubik
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// -------------------------------Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// -------------------------------Variable
+$primary-color: #fa4226;
+$secondary-color: #222;
+$text-color: #000;
+
+$primary-font: 'Poppins', sans-serif;
+$heading-font: 'Poppins', sans-serif;
+$text-font: 'Rubik', sans-serif;
+
+// -------------------------------Setting
+html {
+    font-family: $primary-font;
+}
+// -------------------------------Typography
+html {
+    font-size: 62.5%;
+    line-height: 1.5;
+    color: $text-color;
+    font-weight: 400;
+    word-break: break-word;
+}
+body {
+    font-size: 1.6rem;  //16px
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1;
+    color: $text-color;
+    font-family: $heading-font;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.bold {
+    font-weight: bold;
+}

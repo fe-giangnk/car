@@ -1,0 +1,91 @@
+// -------------------------------Color
+$success-color: #47d864;
+$warning-color: #ffc021;
+$error-color: #ff623d;
+// -------------------------------Z-index
+$floor-index : 1;
+$ceil-index : 10;
+$fixed-index : 1000;
+$modal-index : 1001;
+// -------------------------------Reset
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    appearance: none;
+}
+// -------------------------------Tag
+img {
+    object-fit: cover;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    transition: all .3s;
+}
+ul {
+    list-style-type: none;
+}
+// -------------------------------Scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+}
+// -------------------------------Btn
+.btn {
+    display: inline-flex;
+    column-gap: 5px;
+    color: #000;
+    transition: all .3s;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 10px;
+    border: 1px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        color: $primary-color;
+    }
+    span {
+        font-weight: inherit;
+    }
+}
+.btn-sm {
+    padding: 1.5rem 3rem;
+}
+.btn-md {
+    padding: 1.8rem 3rem;
+}
+.btn-primary {
+    color: #fff;
+    background: $primary-color;
+    box-shadow: 0 10px 15px 0 rgba(255,83,48,.35);
+
+    &:hover {
+        color: #fff;
+        box-shadow: 0 10px 15px 0 rgba(255,83,48,.5);
+    }
+}
+.btn-light {
+    color: #fff;
+}
+.btn-dark {
+    color: #fff;
+    background: #000;
+    &:hover {
+        background: transparent; 
+        color: #000;
+        border-color: #000;
+    }
+}
+// -------------------------------Setting
+.bdrs {
+    border-radius: 3px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+// [class ^= 'className'] {Code here}

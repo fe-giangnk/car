@@ -1,0 +1,60 @@
+// footer
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    @include responsive(md) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 6rem;
+    }
+    @include responsive(xl) {
+        grid-template-columns: 27fr 18fr 21fr 24fr;
+        grid-gap: 8rem;
+    }
+
+    .widget {
+        .title, .content {
+            margin-bottom: 3rem;
+        }
+        .title {
+            font-size: 2.4rem;
+            font-weight: bold;
+            span {
+                font-weight: normal;
+            }
+        }
+        .content {
+            p {
+                & + p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .links {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                color: $text-color;
+                & + a {
+                    margin-top: 1rem;
+                }
+                span {
+                    font-weight: inherit;
+                }
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+        .formValidation {
+            grid-gap: 1rem;
+            .form-cell {
+                    button[type='submit'] {
+                        margin-top: 0;
+                        border-color: transparent;
+                    }
+            }
+        }
+    }
+}

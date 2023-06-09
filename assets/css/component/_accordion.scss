@@ -1,0 +1,66 @@
+// .accordions
+//     .accordion, .active
+//         .panel
+.accordions {
+    .accordion {
+        overflow: hidden;
+        button {
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s all;
+            color: $secondary-color;
+            padding: 10px;
+            border: none;
+            border-radius: 0;
+            outline: none;
+            height: auto;
+            font-size: 1.8rem;
+            position: relative;
+            z-index: $ceil-index;
+            text-align: left;
+            padding: 1.8rem 4.5rem;
+            &:hover {
+                background-color: $primary-color;
+                box-shadow: 0 10px 15px 0 rgba(255,83,48,.35);
+                color: #fff;
+            }
+            &::after {
+                content: '\002B';
+                color: inherit;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+            }
+        }
+    }
+    
+    .active {
+        button {
+            color: #fff;
+            background-color: $primary-color;
+            box-shadow: 0 10px 15px 0 rgba(255,83,48,.35);
+            &::after {
+                content: "\2212";
+            }
+        }
+        .panel {
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+    }
+    
+    .panel {
+        transition: all .6s ease;
+        max-height: 0;
+        border-top-color: transparent;
+        background: #fff;
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+        p {
+            padding: 2.8rem 4.5rem;
+        }
+    }
+}    

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/libary/css/normalize.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <div class="header-nav--logo interactable">
+                    <a href="index.html"><img src="./assets/images/logo.png" alt=""></a>
+                </div>
+                <nav class="header-nav--links">
+                    <a class="active interactable" href="home.html">
+                        <div>Home</div>
+                    </a>
+                    <a class="interactable" href="about.html">
+                        <div>About</div>
+                    </a>
+                    <a class="interactable" href="vehicle-models.html">
+                        <div>Vehicle Models</div>
+                    </a>
+                    <a class="interactable" href="our-team.html">
+                        <div>Our Team</div>
+                    </a>
+                    <a class="interactable" href="contact.html">
+                        <div>Contact</div>
+                    </a>
+                </nav>
+                <div class="header-nav--buttons">
+                    <a href="javascript:void(0)" class="btn login-modal-open interactable">Sign in</a>
+                    <a href="javascript:void(0)" class="btn bdrs btn-sm btn-primary register-modal-open interactable">Register</a>
+                    <div class="mobile-nav--open">
+                        <a href="javascript:void(0)" class="btn interactable">Menu</a>
+                    </div>
+                </div>
+                <!-- ----------mobile display---------- -->
+                <div class="mobile-nav">
+                    <div class="mobile-nav--close">
+                        <a href="javascript:void(0)" class="btn btn-light interactable">Close</a>
+                    </div>
+                    <div class="mobile-nav--scroll">
+                        <nav class="mobile-nav--links">
+                            <a class="active interactable" href="home.html">
+                                <div>Home</div>
+                            </a>
+                            <a class="interactable" href="about.html">
+                                <div>About</div>
+                            </a>
+                            <a class="interactable" href="vehicle-models.html">
+                                <div>Vehicle Models</div>
+                            </a>
+                            <a class="interactable" href="our-team.html">
+                                <div>Our Team</div>
+                            </a>
+                            <a class="interactable" href="contact.html">
+                                <div>Contact</div>
+                            </a>
+                        </nav>
+                        <div class="header-nav--buttons">
+                            <a href="javascript:void(0)" class="btn btn-light login-modal-open interactable">Sign in</a>
+                            <a href="javascript:void(0)" class="btn bdrs btn-sm btn-primary register-modal-open interactable">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section"></section>
+        <section class="modal-group">
+            <div id="login-modal" class="modal short-modal">
+                <div class="modal-content">
+                    <a href="javascript:void(0)" class="modal-close close interactable">Close</a>
+                    <form action="" class="formValidation" id="loginForm">
+                        <div class="form-cell interactable">
+                            <label for="loginUserName">User name</label>
+                            <input class="isRequired" id="loginUserName" type="text" name="loginUserName"
+                                placeholder="Enter your user name" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="loginPassword">Password</label>
+                            <input class="isRequired" id="loginPassword" type="password" name="loginPassword"
+                                placeholder="Enter the password at least 6 characters" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <button class="uppercase" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="register-modal" class="modal short-modal">
+                <div class="modal-content">
+                    <a href="javascript:void(0)" class="modal-close close interactable">Close</a>
+                    <form action="" class="formValidation" id="registerForm">
+                        <div class="form-cell interactable">
+                            <label for="registerEmail">Email</label>
+                            <input class="isRequired" id="registerEmail" type="email" name="registerEmail"
+                                placeholder="Enter your email" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="phone">Phone</label>
+                            <input class="isRequired" id="phone" type="tel" name="phone" placeholder="Enter your phone"
+                                autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="registerUserName">User name</label>
+                            <input class="isRequired" id="registerUserName" type="text" name="registerUserName"
+                                placeholder="Enter your user name" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="registerPassword">Password</label>
+                            <input class="isRequired" id="registerPassword" type="password" name="registerPassword"
+                                placeholder="Enter the password at least 6 characters" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="confirmPassword">Confirm password</label>
+                            <input class="isRequired" id="confirmPassword" type="password" name="confirmPassword"
+                                placeholder="Enter the password at least 6 characters" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <!-- Submit -->
+                        <div class="form-cell interactable">
+                            <button class="uppercase" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="section">
+            <div class="container">
+                <div class="footer">
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Title <span>Sub</span></h5>
+                        <div class="content interactable">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odio magnam porro, reprehenderit ducimus facilis sed. Consequuntur nisi sequi ad.</p>
+                        </div>
+                        <div class="links interactable">
+                            <a href="javascript:void(0)" class="bold"><span class="lnr lnr-phone-handset"></span>(123)-456-789</a>
+                            <a href="javascript:void(0)" class="bold"><span class="lnr lnr-envelope"></span>abcdefg@gmail.com</a>
+                            <a href="javascript:void(0)" class="bold">Design by ...</a>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Navigation</h5>
+                        <div class="links interactable">
+                            <a href="javascript:void(0)">How we work</a>
+                            <a href="javascript:void(0)">Blog</a>
+                            <a href="javascript:void(0)">Careers</a>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Working hours</h5>
+                        <div class="content interactable">
+                            <p>Mon - Fri: 9:00AM - 9:00PM</p>
+                            <p>Sat: 9:00AM - 19:00PM</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Subscription</h5>
+                        <div class="content interactable">
+                            <p>Subscribe your Email address for latest news & updates.</p>
+                        </div>
+                        <form action="" id="subscription" class="formValidation interactable">
+                            <div class="form-cell">
+                                <input class="isRequired" type="email" name="subcripyEmail" placeholder="Enter your email" autocomplete="on">
+                                <span class="message"></span>
+                            </div>
+                            <div class="form-cell">
+                                <button type="submit" class="btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <div class="cursor" id="cursor"></div>
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.section-about {
+    .row {
+        align-items: center;
+        @include responsive(md) {
+            flex-direction: column;
+        }
+        @include responsive(lg) {
+            flex-direction: row;
+        }
+        .col {
+            img {
+                display: block;
+                margin: auto;
+                @include responsive(md) {
+                    width: 80%;
+                }
+                @include responsive(lg) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

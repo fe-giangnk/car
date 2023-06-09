@@ -1,0 +1,67 @@
+// -------------------------------Container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+
+    @include responsive(sm) {
+        max-width: 540px;
+    }
+    @include responsive(672px) {
+        max-width: 632px; //Fix space
+    }
+    @include responsive(md) {
+        max-width: 720px;
+    }
+    @include responsive(lg) {
+        max-width: 960px;
+    }
+    @include responsive(xl) {
+        max-width: 1140px;
+        padding: 0 15px;
+    }
+    @include responsive(1370px) {
+        max-width: 1330px;
+    }
+}
+.container-fluid {
+    max-width: none;
+}
+// -------------------------------Row & Col
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 3rem;
+    @include responsive(md) {
+        flex-direction: row;
+        margin: 0 -5px;
+    }
+    @include responsive(lg) {
+        margin: 0 -10px;
+    }
+    @include responsive(xl) {
+        margin: 0 -15px;
+    }
+}
+.col {
+    width: 100%;
+    flex: 1 1 0;
+    @include responsive(md) {
+        padding: 0 5px;
+    }
+    @include responsive(lg) {
+        padding: 0 10px;
+    }
+    @include responsive(xl) {
+        padding: 0 15px;
+    }
+}
+// -------------------------------Section
+.section {
+    padding: 50px 0;
+    @include responsive(md) {
+        padding: 100px 0;
+    }
+}

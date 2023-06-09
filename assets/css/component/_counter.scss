@@ -1,0 +1,21 @@
+.counters {
+    
+    .counter {
+        float: left;
+        display: table;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        h4, span {
+            display: table-cell;
+        }
+        h4 {
+            font-weight: bold;
+            font-size: 4.6rem;
+            line-height: 1;
+        }
+        span {
+            padding-left: .5rem;
+            vertical-align: middle;
+        }
+    }
+}

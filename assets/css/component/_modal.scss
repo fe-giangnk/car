@@ -1,0 +1,94 @@
+// -------------------------------Auto
+// .modal
+//     .modal-content
+//         .close
+//         .modal-content-scroll
+// -------------------------------Short
+// .modal, .short-modal
+//     .modal-content
+//         .close
+
+.modal {
+    position: fixed;
+    z-index: $fixed-index;
+    inset: 0;
+    display: none;
+    // display: flex;
+    justify-content: center;
+    &::before {
+        content: '';
+        display: block;
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        inset: 0;
+        z-index: $fixed-index;
+    }
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        margin-top: -35px;
+        text-decoration: underline;
+        color: #fff;
+        font-weight: bold;
+        transition: all .6s;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    .modal-content {
+        min-width: 300px;
+        border-radius: 5px;
+        width: calc(100% - 20px);
+        margin: 50px 10px;
+        position: relative;
+        z-index: $modal-index;
+        animation: blink .3s;
+        @include responsive(lg) {
+            width: 50%;
+        }
+        background: #fff;
+        .modal-content-scroll {
+            border-radius: 5px;
+            padding: 20px;
+            overflow: auto;
+            position: absolute;
+            inset: 0;
+        }
+    }
+    @keyframes blink {
+        0% {
+            opacity: 0;
+            margin-top: -50px;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 50px;
+        }
+    }
+}
+
+.short-modal {
+    .modal-content {
+        max-width: 450px;
+        position: absolute;
+        top: 30px;
+        padding: 20px;
+        @media screen and (max-height: 450px){
+            animation: blk .3s;
+            overflow: scroll;
+            height: calc(100% - 60px);
+            margin-top: 0;
+        }
+    }
+    @keyframes blk {
+        0% {
+            opacity: 0;
+            margin-top: -50px;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 0px;
+        }
+    }
+}

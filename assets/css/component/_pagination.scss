@@ -1,0 +1,36 @@
+.pagination {
+    text-align: center;
+    margin-top: 50px;
+    @include responsive(md) {
+        margin-top: 100px;
+    }
+    ul {
+        li {
+            display: none;
+            @include responsive(sm) {
+                display: inline-block;
+            }
+            margin: 0 5px;
+            a {
+                color: $text-color;
+                font-size: 1.8rem;
+                padding: 1rem;
+            }
+            &:hover {
+                a {
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .active {
+            a {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+        .show {
+            display: inline-block;
+        }
+    }
+}

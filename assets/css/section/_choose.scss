@@ -1,0 +1,27 @@
+.section-choose {
+    background-color: #fff;
+    background-image: url(../images/mark.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .section-choose--content {
+        display: flex;
+        gap: 5rem;
+        flex-direction: column;
+        @include responsive(lg) {
+            flex-direction: row;
+            gap: 15rem;
+        }
+        .left-content, .right-content {
+            flex: 1;
+        }
+        .left-content {
+            order: 2;
+            @include responsive(lg) {
+                order: 1;
+            }
+        }
+        .right-content {
+            order: 1;
+        }
+    }
+}

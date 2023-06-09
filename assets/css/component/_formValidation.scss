@@ -1,0 +1,100 @@
+// .formValidation
+//     .form-cell, .select-cell, .error-cell
+//         label
+//         input, .isRequired
+//         .message
+
+// -------------------------------Tag
+textarea {
+    resize: none;
+    height: 150px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+button {font-weight: bold;transition: all .3s;}
+
+select,
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: auto;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 15px;
+    height: 15px;
+}
+
+input[type="file"] {
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+    border-color: transparent;
+}
+
+select option {
+    border-radius: 0;
+}
+button, input[type='file'],
+input[type='checkbox'], 
+input[type='checkbox'] ~ label, 
+input[type='radio'], 
+input[type='radio'] ~ label,
+select {
+    cursor: pointer;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    height: 45px;
+    padding: 0px 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+// -------------------------------Component
+.formValidation {
+    display: grid;
+    grid-gap: 1.5rem;
+
+    .form-cell {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-weight: bold;
+        }
+        .message {
+            margin-top: .5rem;
+            font-size: 12px;
+            display: none;
+        }
+        button[type='submit'] {
+            margin-top: 2rem;
+        }
+    }
+
+    .select-cell {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .error-cell {
+        input, select {
+            background-color: #f8d7da;
+            color: $error-color;
+            border-color: $error-color;
+            &::placeholder {
+                color: $error-color;
+            }
+        }
+        .message {
+            display: block;
+            color: $error-color;
+        }
+    }
+}
+  

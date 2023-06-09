@@ -1,0 +1,14 @@
+.section-faq {
+    @include responsive(xl) {
+        background-image: url(../images/faq.png);
+        background-position: -100px 100%;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    .accordions {
+        margin: auto;
+        @include responsive(xl) {
+            max-width: 80rem;
+        }
+    }
+}

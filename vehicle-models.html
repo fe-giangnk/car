@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Models</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/libary/css/normalize.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container">
+            <nav class="header-nav">
+                <div class="header-nav--logo interactable">
+                    <a href="index.html"><img src="./assets/images/logo.png" alt=""></a>
+                </div>
+                <nav class="header-nav--links">
+                    <a class="interactable" href="home.html">
+                        <div>Home</div>
+                    </a>
+                    <a class="interactable" href="about.html">
+                        <div>About</div>
+                    </a>
+                    <a class="active interactable" href="vehicle-models.html">
+                        <div>Vehicle Models</div>
+                    </a>
+                    <a class="interactable" href="our-team.html">
+                        <div>Our Team</div>
+                    </a>
+                    <a class="interactable" href="contact.html">
+                        <div>Contact</div>
+                    </a>
+                </nav>
+                <div class="header-nav--buttons">
+                    <a href="javascript:void(0)" class="btn login-modal-open interactable">Sign in</a>
+                    <a href="javascript:void(0)"
+                        class="btn bdrs btn-sm btn-primary register-modal-open interactable">Register</a>
+                    <div class="mobile-nav--open">
+                        <a href="javascript:void(0)" class="btn interactable">Menu</a>
+                    </div>
+                </div>
+                <!-- ----------mobile display---------- -->
+                <div class="mobile-nav">
+                    <div class="mobile-nav--close">
+                        <a href="javascript:void(0)" class="btn btn-light interactable">Close</a>
+                    </div>
+                    <div class="mobile-nav--scroll">
+                        <nav class="mobile-nav--links">
+                            <a class="interactable" href="home.html">
+                                <div>Home</div>
+                            </a>
+                            <a class="interactable" href="about.html">
+                                <div>About</div>
+                            </a>
+                            <a class="active interactable" href="vehicle-models.html">
+                                <div>Vehicle Models</div>
+                            </a>
+                            <a class="interactable" href="our-team.html">
+                                <div>Our Team</div>
+                            </a>
+                            <a class="interactable" href="contact.html">
+                                <div>Contact</div>
+                            </a>
+                        </nav>
+                        <div class="header-nav--buttons">
+                            <a href="javascript:void(0)" class="btn btn-light login-modal-open interactable">Sign in</a>
+                            <a href="javascript:void(0)"
+                                class="btn bdrs btn-sm btn-primary register-modal-open interactable">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="title interactable">Vehicle Models</h1>
+                    <ul class="breadcrumb">
+                        <li><a class="interactable" href="home.html">Home</a></li>
+                        <li><a class="interactable" href="javascript:void(0)">Vehicle Models</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="modal-group">
+            <div id="login-modal" class="modal short-modal">
+                <div class="modal-content">
+                    <a href="javascript:void(0)" class="modal-close close interactable">Close</a>
+                    <form action="" class="formValidation" id="loginForm">
+                        <div class="form-cell interactable">
+                            <label for="userName">User name</label>
+                            <input class="isRequired" id="userName" type="text" name="userName"
+                                placeholder="Enter your user name" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="loginPassword">Password</label>
+                            <input class="isRequired" id="loginPassword" type="password" name="loginPassword"
+                                placeholder="Enter the password at least 6 characters" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <button class="uppercase" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="register-modal" class="modal short-modal">
+                <div class="modal-content">
+                    <a href="javascript:void(0)" class="modal-close close interactable">Close</a>
+                    <form action="" class="formValidation" id="registerForm">
+                        <div class="form-cell interactable">
+                            <label for="registerEmail">Email</label>
+                            <input class="isRequired" id="registerEmail" type="email" name="registerEmail"
+                                placeholder="Enter your email" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="phone">Phone</label>
+                            <input class="isRequired" id="phone" type="tel" name="phone" placeholder="Enter your phone"
+                                autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="registerUserName">User name</label>
+                            <input class="isRequired" id="registerUserName" type="text" name="registerUserName"
+                                placeholder="Enter your user name" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="registerPassword">Password</label>
+                            <input class="isRequired" id="registerPassword" type="password" name="registerPassword"
+                                placeholder="Enter the password at least 6 characters" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <label for="confirmPassword">Confirm password</label>
+                            <input class="isRequired" id="confirmPassword" type="password" name="confirmPassword"
+                                placeholder="Enter the password at least 6 characters" autocomplete="on">
+                            <span class="message"></span>
+                        </div>
+                        <div class="form-cell interactable">
+                            <button class="uppercase" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+               <div class="model-group">
+                    <div class="model">
+                        <div class="picture interactable" style="background-image: url(./assets/images/model1.png);"></div>
+                        <div class="content interactable">
+                            <div class="infor">
+                                <h3 class="bold">Audi A1</h3>
+                                <p class="price"><span>$45</span>per day</p>
+                                <p><i class="fas fa-car"></i> Audi</p>
+                                <p><i class="fas fa-cogs"></i> Manual</p>
+                                <p><i class="fas fa-gas-pump"></i> Gasoline</p>
+                                <p><span>Doors</span>4/5</p>
+                            </div>
+                            <a href="javascript:void(0)" class="uppercase btn-primary">Book ride</a>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="picture interactable" style="background-image: url(./assets/images/model2.png);"></div>
+                        <div class="content interactable">
+                            <div class="infor">
+                                <h3 class="bold">Golf 6</h3>
+                                <p class="price"><span>$37</span>per day</p>
+                                <p><i class="fas fa-car"></i> VW</p>
+                                <p><i class="fas fa-cogs"></i> Manual</p>
+                                <p><i class="fas fa-gas-pump"></i> Diesel</p>
+                                <p><span>Doors</span>4/5</p>
+                            </div>
+                            <a href="javascript:void(0)" class="uppercase btn-primary">Book ride</a>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="picture interactable" style="background-image: url(./assets/images/model3.png);"></div>
+                        <div class="content interactable">
+                            <div class="infor">
+                                <h3 class="bold">Toyota</h3>
+                                <p class="price"><span>$30</span>per day</p>
+                                <p><i class="fas fa-car"></i> Camry</p>
+                                <p><i class="fas fa-cogs"></i> Manual</p>
+                                <p><i class="fas fa-gas-pump"></i> Diesel</p>
+                                <p><span>Doors</span>4/5</p>
+                            </div>
+                            <a href="javascript:void(0)" class="uppercase btn-primary">Book ride</a>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="picture interactable" style="background-image: url(./assets/images/model4.png);"></div>
+                        <div class="content interactable">
+                            <div class="infor">
+                                <h3 class="bold">BMW 320</h3>
+                                <p class="price"><span>$35</span>per day</p>
+                                <p><i class="fas fa-car"></i> ModernLine</p>
+                                <p><i class="fas fa-cogs"></i> Manual</p>
+                                <p><i class="fas fa-gas-pump"></i> Gasoline</p>
+                                <p><span>Doors</span>4/5</p>
+                            </div>
+                            <a href="javascript:void(0)" class="uppercase btn-primary">Book ride</a>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="picture interactable" style="background-image: url(./assets/images/model5.png);"></div>
+                        <div class="content interactable">
+                            <div class="infor">
+                                <h3 class="bold">Mercedes</h3>
+                                <p class="price"><span>$50</span>per day</p>
+                                <p><i class="fas fa-car"></i> Benz GLK</p>
+                                <p><i class="fas fa-cogs"></i> Manual</p>
+                                <p><i class="fas fa-gas-pump"></i> Gasoline</p>
+                                <p><span>Doors</span>4/5</p>
+                            </div>
+                            <a href="javascript:void(0)" class="uppercase btn-primary">Book ride</a>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="picture interactable" style="background-image: url(./assets/images/model6.png);"></div>
+                        <div class="content interactable">
+                            <div class="infor">
+                                <h3 class="bold">VW Passat</h3>
+                                <p class="price"><span>$50</span>per day</p>
+                                <p><i class="fas fa-car"></i> CC</p>
+                                <p><i class="fas fa-cogs"></i> Manual</p>
+                                <p><i class="fas fa-gas-pump"></i> Gasoline</p>
+                                <p><span>Doors</span>4/5</p>
+                            </div>
+                            <a href="javascript:void(0)" class="uppercase btn-primary">Book ride</a>
+                        </div>
+                    </div>
+               </div>
+               <div class="pagination">
+                   <ul>
+                       <li class="show uppercase"><a href="javascript:void(0)">Prev</a></li>
+                       <li class="show active"><a href="javascript:void(0)">1</a></li>
+                       <li class="show"><a href="javascript:void(0)">2</a></li>
+                       <li class="show"><a href="javascript:void(0)">3</a></li>
+                       <li><a href="javascript:void(0)">4</a></li>
+                       <li><a href="javascript:void(0)">5</a></li>
+                       <li><a href="javascript:void(0)">6</a></li>
+                       <li class="show uppercase"><a href="javascript:void(0)">Next</a></li>
+                   </ul>
+               </div>
+            </div>
+        </section>
+        <section class="section section-cta">
+            <div class="container">
+                <h2 class="title interactable">Book a car by getting in touch with us</h2>
+                <p class="desc interactable"><span><a href="tel:+84347665262">(123)-456-7869</a></span> Call to support.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="section">
+            <div class="container">
+                <div class="footer">
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Title <span>Sub</span></h5>
+                        <div class="content interactable">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odio magnam porro,
+                                reprehenderit ducimus facilis sed. Consequuntur nisi sequi ad.</p>
+                        </div>
+                        <div class="links interactable">
+                            <a href="javascript:void(0)" class="bold"><span
+                                    class="lnr lnr-phone-handset"></span>(123)-456-789</a>
+                            <a href="javascript:void(0)" class="bold"><span
+                                    class="lnr lnr-envelope"></span>abcdefg@gmail.com</a>
+                            <a href="javascript:void(0)" class="bold">Design by ...</a>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Navigation</h5>
+                        <div class="links interactable">
+                            <a href="javascript:void(0)">How we work</a>
+                            <a href="javascript:void(0)">Blog</a>
+                            <a href="javascript:void(0)">Careers</a>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Working hours</h5>
+                        <div class="content interactable">
+                            <p>Mon - Fri: 9:00AM - 9:00PM</p>
+                            <p>Sat: 9:00AM - 19:00PM</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="title uppercase interactable">Subscription</h5>
+                        <div class="content interactable">
+                            <p>Subscribe your Email address for latest news & updates.</p>
+                        </div>
+                        <form action="" id="subscription" class="formValidation interactable">
+                            <div class="form-cell">
+                                <input class="isRequired" type="email" name="subcripyEmail"
+                                    placeholder="Enter your email" autocomplete="on">
+                                <span class="message"></span>
+                            </div>
+                            <div class="form-cell">
+                                <button type="submit" class="btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <div class="cursor" id="cursor"></div>
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+
+</html>

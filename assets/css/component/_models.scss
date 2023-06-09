@@ -1,0 +1,60 @@
+.model-group {
+    display: grid;
+    grid-gap: 3rem;
+    @include responsive(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include responsive(xl) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 4rem;
+    }
+}
+.model {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 5px 15px 10px -5px rgba(0,0,0,0.25);
+    .picture {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 75%;
+        }
+    }
+    .content {
+        padding: 1.5rem 2rem;
+        .infor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            margin-bottom: 1.5rem;
+            h3 {
+                font-size: 2.8rem;
+            }
+            .price {
+                span {
+                    font-size: 2.8rem;
+                }
+            }
+            p {
+                span {
+                    display: inline-block;
+                    line-height: 1;
+                    margin-right: 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .btn-primary {
+            display: block;
+            text-align: center;
+            padding: 2rem;
+            font-weight: bold;
+            font-size: 1.8rem;
+            border-radius: 3px;
+            box-shadow: none;
+        }
+    }
+}

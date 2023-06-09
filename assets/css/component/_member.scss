@@ -1,0 +1,93 @@
+// member
+//     avatar
+//     infor
+//     overlay
+//         middle
+.team {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    @include responsive(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include responsive(xl) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.member {
+    box-shadow: 0 20px 10px 0 rgba(0,0,0,.08);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    .infor, .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        transition: all 0.5s ease-in;
+        padding: 2rem 1rem;
+    }
+    .avatar {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 130%;
+        }
+    }
+    .infor {
+        bottom: 0;
+        h5, p {
+            color: #fff;
+        }
+        h5 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .overlay {
+        top: -100%;
+        height: 100%;
+        .middle {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            h5, p {
+                color: #fff;
+                margin-bottom: .5rem;
+            }
+            h5 {
+                font-size: 2.8rem;
+            }
+            .desc {
+                margin: 3rem 0;
+            }
+            .social-icones {
+                display: inline-flex;
+                position:relative;
+                .icon {
+                    width: 4rem;
+                    height: 4rem;
+                    line-height: 4rem;
+                    background-color: #fff;
+                    display: block;
+                    text-align: center;
+                    margin-right: 5px;
+                    color: #000;
+                }   
+            }
+        }
+    }
+
+    &:hover {
+        .overlay {
+            top: 0;
+        }
+        .infor {
+            bottom: -10rem;
+        }
+     }
+}

@@ -1,0 +1,27 @@
+// megaHeading, megaHeading--center
+//     sub-title
+//     title
+//     desc
+
+.megaHeading {
+    margin-bottom: 5rem !important;
+    .sub-title {
+        font-family: $heading-font;
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        font-weight: bold;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+    .desc {
+        font-family: $heading-font;
+    }
+}
+.megaHeading--center {
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+}

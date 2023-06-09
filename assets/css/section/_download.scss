@@ -1,0 +1,30 @@
+.section-download {
+    background-color: #f8f8f8;
+    @include responsive(md) {
+        background-image: url(../images/download.png);
+    }
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    .mega-heading {
+        max-width: 55rem;
+    }
+    .links {
+        a {
+            display: inline-block;
+            & + a {
+                margin-left: 1.5rem;
+            }
+        }
+        img {
+            height: 3.5rem;
+            width: auto;
+            @include responsive(sm) {
+                height: 4.5rem;
+            }
+            @include responsive(md) {
+                height: 6.5rem;
+            }
+        }
+    }
+}

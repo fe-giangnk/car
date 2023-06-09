@@ -1,0 +1,27 @@
+.section-cta {
+    background: $secondary-color;
+    text-align: center;
+    .title, .desc {
+        color: #fff;
+    }
+    .title {
+        margin-bottom: 1.5rem;
+        font-size: 3.9rem;
+        line-height: 1.3;
+        font-weight: bold;
+        @include responsive(lg) {
+            font-size: 5.2rem;
+        }
+    }
+    .desc {
+        @include responsive(md) {
+            font-size: 2.4rem;
+        }
+        span {
+            color: $primary-color;
+            a {
+                color: inherit;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.breadcrumb {
+    list-style: none;
+    li {
+        display: inline-block;
+        font-size: 1.8rem;
+        a {
+            color: $primary-color;
+        }
+        & + li {
+            &::before {
+                padding: 1rem;
+                color: $primary-color;
+                content: "/\00a0";
+                display: inline-block;
+            }
+        }
+        &:last-child {
+            a {
+                color: $text-color;
+            }
+        }
+    }
+}

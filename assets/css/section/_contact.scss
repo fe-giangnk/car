@@ -1,0 +1,39 @@
+.section-contact {
+    @include responsive(lg) {
+        background-image: url(../images/bg-contact.png);
+        background-size: 80rem;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .links {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: $text-color;
+            & + a {
+                margin-top: 1.5rem;
+            }
+            span {
+                font-weight: inherit;
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .row {
+        row-gap: 5rem;
+    }
+    .megaHeading {
+        @include responsive(lg) {
+            max-width: 50rem;
+        }
+    }
+    .formValidation {
+        button[type='submit'] {
+            border-color: transparent;
+        }
+    }
+}

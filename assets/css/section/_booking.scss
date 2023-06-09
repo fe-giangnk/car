@@ -1,0 +1,227 @@
+// modal map
+// #booking-modal
+//     modal-content
+//         modal-close
+//         modal-content-scroll
+//             render-wrap
+//                 title
+//                 desc
+//                 #order-infor
+//                     order-infor--content
+//                         title
+//                     order-infor--image
+//                         title
+//            person-form
+#booking-modal {
+    .modal-content {
+        max-width: 645px;
+        .modal-content-scroll {
+            padding: 0;
+            .render-wrap {
+                > .title {
+                    color: #fff;
+                    padding: 1rem 1.5rem;
+                    font-size: 2.4rem;
+                    font-weight: bold;
+                    font-family: $primary-font;
+                    background: $primary-color;
+                }
+                > .desc {
+                    padding: 2rem 3rem;
+                    background: #f8d7da;
+                    font-size: 1.7rem;
+                    h4 {
+                        color: $primary-color;
+                        font-size: 1.9rem;
+                        font-weight: bold;
+                        margin-bottom: 1.5rem;
+                        span {
+                            display: inline-block;
+                            font-weight: inherit;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                #order-infor {
+                    display: flex;
+                    flex-direction: column;
+                    @include responsive(md) {
+                        flex-direction: row;
+                    }
+                    padding: 3rem;
+                    border-bottom: 1px solid #ccc;
+                    
+                    .title {
+                        color: $primary-color;
+                        font-size: 1.8rem;
+                        margin-bottom: 2rem;
+                        font-weight: bold;
+                        span {
+                            display: inline-block;
+                            margin-right: 5px;
+                            color: #000;
+                        }
+                    }
+
+                    .order-infor--content, .order-infor--image {
+                        flex: 1;
+                    }
+                    .order-infor--content {
+                        div {
+                            margin-bottom: 3.2rem;
+                        }
+                        h6 {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            margin-bottom: 0.2rem;
+                            span {
+                                display: inline-block;
+                                margin-right: 5px;
+                                font-weight: bold;
+                            }
+                        }
+                        p {
+                            color: #777;
+                        }
+                    }
+                    .order-infor--image {
+                        @include responsive(md) {
+                            flex-grow: 1.5;
+                        }
+                    }
+                }
+            }
+            .person-form {
+                padding: 3rem;
+                .person-form--title {
+                    color: $primary-color;
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+                    font-weight: bold;
+                }
+                #person-form {
+                    display: grid;
+                    grid-gap: 2rem;
+                    grid-template-columns: 1fr;
+                    @include responsive(sm) {
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 3rem;
+                    }
+
+                    .col-span-2 {
+                        @include responsive(sm) {
+                            grid-column-end: span 2;
+                        }
+                    }
+
+                    .col-start-2 {
+                        @include responsive(sm) {
+                            grid-column-start: 2;
+                        }
+                    }
+
+                    .form-cell {
+                        row-gap: 1rem;
+                        input {
+                            background: #dbdbdb;
+                        }
+                        button[type="submit"] {
+                            border-color: transparent;
+                        }
+                        b {
+                            color: $primary-color;
+                            display: inline-block;
+                            margin-left: 5px;
+                        }
+                        .message {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// section map
+// section-booking
+//     booking
+//         booking-title
+//         booking-message, error
+//         #booking
+.section-booking {
+    .booking {
+        padding: 3rem 1.5rem;
+        @include responsive(md) {
+            padding: 4rem;
+        }
+        background: #fff url(../images/booking_background.png) center no-repeat;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
+        border-radius: 5px;
+
+        &-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 2.7rem;
+        }
+
+        &-message {
+            display: none;
+            border: 1px solid transparent;
+            border-radius: 0.8rem;
+            margin-bottom: 1.8rem;
+            margin-top: -1rem;
+            padding: 1rem 1.4rem;
+            font-weight: bold;
+            background: #ccc;
+            &.error {
+                background: #f8d7da;
+                color: #721c24;
+            }
+    
+            &.success {
+                background: #c3fabe;
+                    color: #2a6817;
+            }
+        }
+
+
+        #booking {
+            display: grid;
+            grid-gap: 2rem;
+            align-items: end;
+            @include responsive(md) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+            }
+            @include responsive(lg) {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto auto auto;
+            }
+            .form-cell {
+                label {
+                    display: block;
+                    margin-bottom: 1.2rem;
+                    span {
+                        display: inline-block;
+                        margin-right: 5px;
+                        font-weight: inherit;
+                    }
+                    b {
+                        display: inline-block;
+                        margin-left: 5px;
+                    }
+                    span, b {
+                        color: $primary-color;
+                    }
+                }
+                button {
+                    font-size: 1.8rem;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
