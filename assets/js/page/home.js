@@ -3,7 +3,7 @@ import formValidation from '../formValidation.js';
 import modal from '../modal.js';
 import accordion from '../accordion.js';
 import tabs from '../tabs.js';
-import cursor from '../cursor.js';
+
 import headerNav from '../headerNav.js';
 import sBooking from '../sectionBooking.js';
 
@@ -32,5 +32,5 @@ accordion('#faq-accordion', true);
 tabs();
 // tabs('#testTabsHorizon');
 
-cursor();
+
 
